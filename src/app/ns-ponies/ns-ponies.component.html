@@ -1,5 +1,8 @@
+<button (click)="refreshPonies()">Refresh Ponies</button>
 <ul>
   @for(pony of ponies(); track pony.id){
-  <li>{{ pony.name }}</li>
+  <li [style.color]="$even ? 'pink' : 'blue'">
+    {{ pony.name }}
+  </li>
   }
 </ul>
