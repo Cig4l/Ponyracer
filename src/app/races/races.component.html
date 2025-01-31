@@ -1,1 +1,5 @@
-<p>races works!</p>
+@for(race of races(); track race.id){
+  <div>
+    <ng-race [raceModel]="race"></ng-race>
+  </div>
+}

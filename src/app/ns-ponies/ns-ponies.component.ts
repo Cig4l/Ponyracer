@@ -1,5 +1,5 @@
 import {Component, signal} from '@angular/core';
-import {PonyModel} from '../models/pony-model';
+import {PonyModel} from '../models/pony-model/pony-model';
 
 @Component({
   selector: 'ns-ponies',
