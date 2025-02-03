@@ -9,16 +9,16 @@ import {PonyModel} from '../models/pony-model/pony-model';
 })
 export class NsPoniesComponent {
   readonly ponies = signal<Array<PonyModel>>([
-    { id: 1, name: 'Rainbow Dash' },
-    { id: 2, name: 'Pinkie Pie' }
+    { id: 1, name: 'Rainbow Dash', color: "BLUE"  },
+    { id: 2, name: 'Pinkie Pie', color: "PURPLE"  }
   ]);
 
   refreshPonies() {
     if(this.ponies().length < 4) {
       this.ponies.set([
         ...this.ponies(),
-        { id: 3, name: 'Fluttershy' },
-        { id: 4, name: 'Rarity' }
+        { id: 3, name: 'Fluttershy', color: "ORANGE" },
+        { id: 4, name: 'Rarity', color: "GREEN" }
       ]);
     }
   }

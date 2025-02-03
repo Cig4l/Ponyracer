@@ -1,13 +1,12 @@
-import {Component, computed, signal} from '@angular/core';
+import {Component, inject} from '@angular/core';
 import {MenuComponent} from './menu/menu.component';
-import {NsPoniesComponent} from './ns-ponies/ns-ponies.component';
 import {RacesComponent} from './races/races.component';
+import {Title} from '@angular/platform-browser';
 
 @Component({
   selector: 'ns-root',
   imports: [
     MenuComponent,
-    NsPoniesComponent,
     RacesComponent
   ],
   templateUrl: './app.component.html',
@@ -15,4 +14,8 @@ import {RacesComponent} from './races/races.component';
 })
 export class AppComponent {
   title = 'ponyracer';
+
+  constructor() {
+    inject(Title).setTitle('PonyRacer - Bet on ponies');
+  }
 }
